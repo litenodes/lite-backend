@@ -13,4 +13,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 
-CMD ["uvicorn", "src.app.api:app", "--host", "127.0.0.1"]
+CMD ["uvicorn", "src.api:app", "--host", "0.0.0.0"]

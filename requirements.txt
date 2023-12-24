@@ -1,0 +1,5 @@
+fastapi==0.105.0
+pytoniq~=0.1.24
+pydantic==2.5.2
+uvicorn==0.25.0
+fastapi-cache2==0.2.1

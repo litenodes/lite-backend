@@ -4,8 +4,11 @@ services:
 
   app:
     container_name: lite-backend-api
-    env_file:
-      - .env
+#    env_file:
+#      - .env
+    environment:
+      - LS_PORT=${LS_PORT}
+      - LS_PUB_KEY=${LS_PUB_KEY}
     build:
       dockerfile: src/Dockerfile
       context: .
