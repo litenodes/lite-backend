@@ -36,7 +36,7 @@ def first_checks(pub_key) -> [Address, str]:
         return_message = 'Invalid public key: ' + message
         return None, return_message
     try:
-        address = calc_pair_address(LS_PUB_KEY, bytes.fromhex(pub_key))
+        address = calc_pair_address(LS_PUB_KEY, pub_key)
         return address, ''
     except Exception as e:
         return_message = f'Failed to calc address: {type(e)}: {e}'

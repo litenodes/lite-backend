@@ -12,6 +12,7 @@ client = LiteClient(
 )
 
 balancer = LiteBalancer([client], timeout=6)
+# balancer = LiteBalancer.from_mainnet_config(1)
 
 
 async def get_client():
@@ -22,6 +23,9 @@ async def get_client():
 
 async def get_balancer():
     if not balancer._alive_peers:
-        await balancer.close_all()
+        try:
+            await balancer.close_all()
+        except:
+            pass
         await balancer.start_up()
     return balancer
