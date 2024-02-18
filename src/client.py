@@ -4,7 +4,7 @@ from .config import LS_PORT, LS_PUB_KEY_B64
 
 
 client = LiteClient(
-    host='127.0.0.1',
+    host='host.docker.internal',
     port=LS_PORT,
     server_pub_key=LS_PUB_KEY_B64,
     timeout=6,

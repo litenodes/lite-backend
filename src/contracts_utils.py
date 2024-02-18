@@ -1,5 +1,5 @@
 from pytoniq_core import Address, Cell, Slice, StateInit, begin_cell
-from pytoniq import LiteClientLike
+from pytoniq import LiteClientLike, RunGetMethodError
 
 from .config import PAIR_CODE_BOC, LS_DEPLOYER_CODE_BOC
 
